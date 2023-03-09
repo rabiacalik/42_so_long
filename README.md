@@ -19,6 +19,7 @@ Uymamız Gereken Kurallar:
 - Eğer map tamamlanamaz durumdaysa oyunu başlatamaz( çıkış yolu duvarlarla kaplıysa veya toplanabilir nesnelerin hepsi toplanamaz durumdaysa)
   
 Geçerli bir harita örneği:
+
 <img width="374" alt="Screen Shot 2023-03-09 at 13 17 42" src="https://user-images.githubusercontent.com/115617420/223992731-f2edfa41-4103-488d-ab9e-da50eda75416.png">
 
 
