@@ -19,15 +19,8 @@ Uymamız Gereken Kurallar:
 - Eğer map tamamlanamaz durumdaysa oyunu başlatamaz( çıkış yolu duvarlarla kaplıysa veya toplanabilir nesnelerin hepsi toplanamaz durumdaysa)
   
 Geçerli bir harita örneği:
-`
-11111111111111111111111
-11000000111000000011011
-10P00000000C00000000001
-11111100000000000000001
-1000C000000000000001111
-11E00000000000000000111
-11111111111111111111111
-`
+<img width="374" alt="Screen Shot 2023-03-09 at 13 17 42" src="https://user-images.githubusercontent.com/115617420/223992731-f2edfa41-4103-488d-ab9e-da50eda75416.png">
+
 
 Oyunu Nasıl Çalıştırabilirim
   "make" yaptıktan sonra "./so_long maps.map1.ber" ile oyunu çalıştırabilirsin 
