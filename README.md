@@ -22,6 +22,8 @@ Geçerli bir harita örneği:
 
 <img width="374" alt="Screen Shot 2023-03-09 at 13 17 42" src="https://user-images.githubusercontent.com/115617420/223992731-f2edfa41-4103-488d-ab9e-da50eda75416.png">
 
+- oyunda kullandığım görselleri kendim yaptım. eğer sizde yapmak isterseniz [Pixil](https://www.pixilart.com/rabireyy) – bu internet sitesinden ücretsiz
+yapabilirsiniz ben burayı kulandım.
 
 Oyunu Nasıl Çalıştırabilirim
   "make" yaptıktan sonra "./so_long maps.map1.ber" ile oyunu çalıştırabilirsin 
