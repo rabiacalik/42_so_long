@@ -19,6 +19,7 @@ Uymamız Gereken Kurallar:
 - Eğer map tamamlanamaz durumdaysa oyunu başlatamaz( çıkış yolu duvarlarla kaplıysa veya toplanabilir nesnelerin hepsi toplanamaz durumdaysa)
   
 Geçerli bir harita örneği:
+
 1111111111111111111111111111111111
 1E0000000000000C00000C000000000001
 1010010100100000101001000000010101
