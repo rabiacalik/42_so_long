@@ -6,19 +6,25 @@
 /*   By: rcalik <rcalik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 11:11:49 by rcalik            #+#    #+#             */
-/*   Updated: 2023/03/09 12:15:22 by rcalik           ###   ########.fr       */
+/*   Updated: 2023/03/20 17:28:50 by rcalik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
+
 # include "./minilibx/mlx.h"
 # include "./libft/libft.h"
 # include "./gnl/get_next_line.h"
 # include "./printf/ft_printf.h"
 # include <stdlib.h>
 # include <fcntl.h>
-# include <stdio.h>
+
+# define KEY_ESC 53
+# define KEY_A 0
+# define KEY_S 1
+# define KEY_D 2
+# define KEY_W 13
 
 typedef struct s_chr
 {
@@ -42,8 +48,11 @@ typedef struct s_map
 	int		b_h_count;
 	int		loc_end_x;
 	int		loc_end_y;
-	int		loc_c_x;
-	int		loc_c_y;
+	int		read_count;
+	int		r;
+	int		b;
+	int		l;
+	int		t;
 }	t_map;
 
 typedef struct s_game
@@ -84,7 +93,6 @@ void	xpm_control_obje(void);
 void	xpm_control_character(void);
 int		close_frame(void *deneme);
 int		str_len(char *str);
-void	no_exit(t_game *general);
-void	cant_pick_carrots(t_game *general);
 void	put_element_one(char c, t_game *general, int x, int y);
+void	placeholder(t_game *general, int x, int y);
 #endif

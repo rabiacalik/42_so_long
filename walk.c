@@ -6,7 +6,7 @@
 /*   By: rcalik <rcalik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 12:28:58 by rcalik            #+#    #+#             */
-/*   Updated: 2023/03/06 14:09:50 by rcalik           ###   ########.fr       */
+/*   Updated: 2023/03/20 15:42:00 by rcalik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	putchr(t_game *general, int keycode)
 {
-	if (keycode == 2)
+	if (keycode == KEY_D)
 		general->chr->chr_chr = general->chr->chr_right;
-	if (keycode == 0)
+	if (keycode == KEY_A)
 		general->chr->chr_chr = general->chr->chr_left;
-	if (keycode == 13)
+	if (keycode == KEY_W)
 		general->chr->chr_chr = general->chr->chr_back;
-	if (keycode == 1)
+	if (keycode == KEY_S)
 		general->chr->chr_chr = general->chr->chr_front;
 }
 
@@ -58,15 +58,15 @@ void	move_p(t_game *general, int side, int x, int y)
 int	walk(int keycode, t_game *general)
 {
 	mlx_clear_window(general->mlx, general->window);
-	if (keycode == 2)
+	if (keycode == KEY_D)
 		move_p(general, keycode, general->chr->loc_x + 64, general->chr->loc_y);
-	if (keycode == 0)
+	if (keycode == KEY_A)
 		move_p(general, keycode, general->chr->loc_x - 64, general->chr->loc_y);
-	if (keycode == 13)
+	if (keycode == KEY_W)
 		move_p(general, keycode, general->chr->loc_x, general->chr->loc_y - 64);
-	if (keycode == 1)
+	if (keycode == KEY_S)
 		move_p(general, keycode, general->chr->loc_x, general->chr->loc_y + 64);
-	if (keycode == 53)
+	if (keycode == KEY_ESC)
 		close_frame(general);
 	screen_print(general);
 	return (keycode);

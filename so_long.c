@@ -6,7 +6,7 @@
 /*   By: rcalik <rcalik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 11:16:30 by rcalik            #+#    #+#             */
-/*   Updated: 2023/03/09 12:15:45 by rcalik           ###   ########.fr       */
+/*   Updated: 2023/03/20 17:24:42 by rcalik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,12 @@ int	main(int argc, char **argv)
 		xpm_control_obje();
 		xpm_control_character();
 		map_ber_control(argv[1]);
-		map_empty_control(argv[1]);
 		map_file_control(argv[1]);
+		map_empty_control(argv[1]);
 		open_windows(&general, argv[1]);
 		screen_print(&general);
+		placeholder(&general, general.map->loc_end_x / 64,
+			general.map->loc_end_y / 64);
 		mlx_hook(general.window, 2, (1L << 0), walk, &general);
 		mlx_hook(general.window, 17, 0, close_frame, &general);
 		mlx_loop(general.mlx);

@@ -5,7 +5,7 @@ LIBFT = -I./libft
 PRINTF = -I./printf
 GNL = $(wildcard gnl/*c)
 GNLOBJS = $(GNL:.c=.o)
-SRCS = map_control_two.c	map_control.c	map_files_control.c		so_long.c	 walk.c xpm_files_control.c		map.c
+SRCS = map_control_two.c	map_control.c map_files_control.c so_long.c walk.c xpm_files_control.c	map.c path_finder.c
 OBJS = $(SRCS:.c=.o)
 NAME = so_long
 

@@ -6,7 +6,7 @@
 /*   By: rcalik <rcalik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 11:57:09 by rcalik            #+#    #+#             */
-/*   Updated: 2023/03/09 11:41:10 by rcalik           ###   ########.fr       */
+/*   Updated: 2023/03/20 17:22:53 by rcalik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,6 @@ void	put_element(char c, t_game *general, int x, int y)
 	put_element_one(c, general, x, y);
 	if (c == 'C')
 	{
-		general->map->loc_c_x = x;
-		general->map->loc_c_y = y;
-		cant_pick_carrots(general);
 		mlx_put_image_to_window(general->mlx, general->window,
 			general->carrot, x, y);
 	}
@@ -42,7 +39,6 @@ void	put_element(char c, t_game *general, int x, int y)
 	{
 		general->map->loc_end_x = x;
 		general->map->loc_end_y = y;
-		no_exit(general);
 		mlx_put_image_to_window(general->mlx, general->window,
 			general->black_hole, x, y);
 	}

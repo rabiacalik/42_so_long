@@ -6,7 +6,7 @@
 /*   By: rcalik <rcalik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 11:35:35 by rcalik            #+#    #+#             */
-/*   Updated: 2023/03/09 12:19:16 by rcalik           ###   ########.fr       */
+/*   Updated: 2023/03/20 17:29:30 by rcalik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,12 +88,13 @@ t_map	*read_map(char *argv_incoming)
 
 	rez = ft_calloc(1, sizeof(t_map));
 	map = read_file(argv_incoming);
+	if (map == NULL)
+	{
+		write(1, "Harita Bos Gonderildi..\n", 26);
+		exit(1);
+	}
 	rez->mappin = ft_split(map, '\n');
 	rez->height = 0;
-	if (rez->mappin == NULL)
-	{
-		write(1, "Bos Map Dosyasi Gonderilemez\n", 30);	
-	}
 	while (rez->mappin[rez->height])
 		rez->height++;
 	rez->width = ft_strlen(rez->mappin[0]);
